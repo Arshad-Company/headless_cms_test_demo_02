@@ -1,17 +1,8 @@
 {# Loop all the zones #}
-<div>
-  testinbgs 1
-</div>
 {% for zone, modules in agilitypage.zones %}
-<div>
-  testinbgs {{ zone }}
-</div>
 	{# Only render the current zone name #}
 	{% if zone === zoneName %}
 		{% for module in  modules  %}
-    <div>
-      testinbgs {{ zone }}
-    </div>
 			{# Render the module based on the module reference name  -ignoring missing module files... #}
 			{% include  "./agility-pageModules/" + module.module.toLowerCase() + ".njk" ignore missing %}
 		{% endfor %}
