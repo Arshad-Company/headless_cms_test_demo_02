@@ -10,10 +10,10 @@
 	{% if zone === zoneName %}
 		{% for module in  modules  %}
     <div>
-      testinbgs {{ module.module }}
+      testinbgs {{ zone }}
     </div>
 			{# Render the module based on the module reference name  -ignoring missing module files... #}
-			{% include  "./agility-pageModules/" + module.module.toLowerCase() + ".njk" %}
+			{% include  "./agility-pageModules/" + module.module.toLowerCase() + ".njk" ignore missing %}
 		{% endfor %}
 	{% endif %}
 {% endfor %}
