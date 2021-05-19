@@ -13,7 +13,7 @@
       testinbgs {{ module.module }}
     </div>
 			{# Render the module based on the module reference name  -ignoring missing module files... #}
-			{% include  "./agility-pageModules/" + module.module.toLowerCase() + ".njk"  ignore missing %}
+			{% include  "./agility-pageModules/" + module.module.toLowerCase() + ".njk" %}
 		{% endfor %}
 	{% endif %}
 {% endfor %}
