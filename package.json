@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "A blog with 11th with content from Agility CMS",
   "main": "index.js",
-  "engines": {
-    "node": ">=14"
-  },
   "scripts": {
     "clean:cms": "node agility/agility.sync.js clear",
     "clean:files": "del dist",
@@ -14,7 +11,7 @@
     "dev:11ty": "NODE_ENV=development eleventy",
     "build:cms": "NODE_ENV=production node agility/agility.sync.js sync",
     "build:css": "NODE_ENV=production postcss src/css/index.css -o dist/styles.css -m",
-    "build:11ty": "eleventy ",
+    "build:11ty": "eleventy",
     "start:css": "postcss src/css/index.css -o dist/styles.css --watch",
     "start:11ty": "NODE_ENV=development eleventy --serve --watch",
     "clean": "run-p clean:* --print-label",
