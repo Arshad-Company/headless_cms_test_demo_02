@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A blog with 11th with content from Agility CMS",
   "main": "index.js",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "clean:cms": "node agility/agility.sync.js clear",
     "clean:files": "del dist",

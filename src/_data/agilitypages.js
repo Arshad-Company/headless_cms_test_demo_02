@@ -77,6 +77,8 @@ async function getAgilityContent() {
           dynamicPageItem.category =
             dynamicPageItem.fields?.category?.fields.title || "Uncategorized";
 
+          console.log(dynamicPageItem.category);
+
           // dynamic page item formatted date
           dynamicPageItem.date = new Date(
             dynamicPageItem.fields.date
