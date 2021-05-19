@@ -11,15 +11,14 @@
     "dev:11ty": "NODE_ENV=development eleventy",
     "build:cms": "NODE_ENV=production node agility/agility.sync.js sync",
     "build:css": "NODE_ENV=production postcss src/css/index.css -o dist/styles.css -m",
-    "build:11ty": "eleventy",
-    "preview:cms": "NODE_ENV=development node agility/agility.sync.js sync",
+    "build:11ty": "eleventy ",
     "start:css": "postcss src/css/index.css -o dist/styles.css --watch",
     "start:11ty": "NODE_ENV=development eleventy --serve --watch",
     "clean": "run-p clean:* --print-label",
     "dev": "run-s clean:files dev:* --print-label",
     "start": "npm-run-all clean:files dev:cms --parallel start:*",
     "build": "run-s clean:files build:* --print-label",
-    "preview": "run-s clean:files build:css build:11ty preview:cms --print-label"
+    "preview": "run-s clean:files dev:* --print-label"
   },
   "author": "Joel Varty",
   "license": "MIT",
